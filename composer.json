@@ -1,0 +1,16 @@
+{
+  "name"       : "spacedmonkey/wp-concatenator",
+  "description": "WordPress plugin to perform CSS and Javascript concatenation of individual script files into one resource request.",
+  "homepage"   : "http://www.github.com/spacedmonkey/wp-concatenator",
+  "type"       : "wordpress-plugin",
+  "license"    : "GPL-2.0+",
+  "authors"    : [
+    {
+      "name"    : "Jonathan Harris",
+      "homepage": "http://www.spacedmonkey.com"
+    }
+  ],
+  "require": {
+    "composer/installers": "~1.0"
+  }
+}
