@@ -65,7 +65,7 @@ class WP_Scripts_Concat extends WP_Scripts {
 	function do_items( $handles = false, $group = false ) {
 		$handles     = false === $handles ? $this->queue : (array) $handles;
 		$javascripts = array();
-		$siteurl     = apply_filters( 'ngx_http_concat_site_url', $this->base_url );
+		$siteurl     = apply_filters( 'wp_concat_site_url', $this->base_url );
 
 		$this->all_deps( $handles );
 		$level = 0;

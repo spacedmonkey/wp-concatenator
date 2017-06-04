@@ -64,7 +64,7 @@ class WP_CSS_Concat extends WP_Styles {
 	function do_items( $handles = false, $group = false ) {
 		$handles     = false === $handles ? $this->queue : (array) $handles;
 		$stylesheets = array();
-		$siteurl     = apply_filters( 'ngx_http_concat_site_url', $this->base_url );
+		$siteurl     = apply_filters( 'wp_concat_site_url', $this->base_url );
 
 		$this->all_deps( $handles );
 
@@ -165,7 +165,7 @@ class WP_CSS_Concat extends WP_Styles {
 				}
 
 				$handles = array_keys( $css );
-				echo apply_filters( 'ngx_http_concat_style_loader_tag', "<link rel='stylesheet' id='$media-css-$idx' href='$href' type='text/css' media='$media' />\n", $handles, $href, $media );
+				echo apply_filters( 'wp_concat_style_loader_tag', "<link rel='stylesheet' id='$media-css-$idx' href='$href' type='text/css' media='$media' />\n", $handles, $href, $media );
 				array_map( array( $this, 'print_inline_style' ), array_keys( $css ) );
 			}
 		}
