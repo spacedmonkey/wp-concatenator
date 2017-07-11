@@ -223,7 +223,7 @@ foreach ( $args as $uri ) {
 $output = $pre_output . $output;
 
 header( 'Last-Modified: ' . gmdate( 'D, d M Y H:i:s', $last_modified ) . ' GMT' );
-header( 'Content-Length: ' . ( strlen( $pre_output ) + strlen( $output ) ) );
+header( 'Content-Length: ' .  strlen( $output ) );
 header( "Content-Type: $mime_type" );
 header( 'Expires: ' . gmdate( "D, d M Y H:i:s", time() + $expires_offset ) . ' GMT' );
 header( "Cache-Control: public, max-age=$expires_offset" );
