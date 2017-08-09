@@ -22,7 +22,7 @@ class Concatenator_Utils {
 	}
 
 	public function realpath( $url, $site_url ) {
-
+		$url = set_url_scheme( $url );
 		if ( filter_var( $url, FILTER_VALIDATE_URL ) === false ) {
 			$url = $site_url . $url;
 		}

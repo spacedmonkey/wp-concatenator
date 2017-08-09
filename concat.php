@@ -1,13 +1,5 @@
 <?php
 /*
- * Concatenation script inspired by Nginx's ngx_http_concat and Apache's modconcat modules.
- *
- * It follows the same pattern for enabling the concatenation. It uses two ?, like this:
- * http://example.com/??style1.css,style2.css,foo/style3.css
- *
- * If a third ? is present it's treated as version string. Like this:
- * http://example.com/??style1.css,style2.css,foo/style3.css?v=102234
- *
  * It will also replace the relative paths in CSS files with absolute paths.
  */
 
